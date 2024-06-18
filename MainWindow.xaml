@@ -1,0 +1,97 @@
+﻿<Window x:Name="AuthorizationWindow" x:Class="AdminPanel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AdminPanel"
+        mc:Ignorable="d"
+        Title="Авторизация" 
+        Height="354"
+        Width="285"
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen" 
+        WindowStyle="None" 
+        BorderBrush="Black"
+        BorderThickness="1"
+        FontFamily="Consolas">
+    <Window.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="View/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+        
+    </Window.Resources>
+    <Grid>
+        <Rectangle x:Name="MoveRectangle" Fill="#202022" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="285" MouseDown="MoveRectangle_MouseDown"/>
+        <StackPanel
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Margin="0,50,0,0">
+            <Label 
+                Content="Авторизация" 
+                HorizontalAlignment="Left" 
+                Margin="0,0,0,0" 
+                VerticalAlignment="Top" 
+                FontSize="20" />
+            <TextBlock
+                FontSize="20"
+                Margin="0,10,0,5"
+                Text="Логин"
+                HorizontalAlignment="Center"/>
+            <TextBox 
+                x:Name="LoginTextBox" 
+                HorizontalAlignment="Left" 
+                Height="29" 
+                Margin="0,0,0,5" 
+                Text="" VerticalAlignment="Top" 
+                Width="131" 
+                FontSize="20"/>
+            <TextBlock
+                FontSize="20"
+                Margin="0,0,0,5"
+                Text="Пароль"
+                HorizontalAlignment="Center"/>
+                <PasswordBox 
+                x:Name="PasswordTextBox" 
+                HorizontalAlignment="Left" 
+                Height="29" 
+                Margin="0" 
+                VerticalAlignment="Top" 
+                Width="131" 
+                FontSize="20"
+                PasswordChar="*"/>
+            <Button 
+                x:Name="LogInButton" 
+                Content="Войти" 
+                HorizontalAlignment="Left" 
+                Margin="0,10,0,0"
+                VerticalAlignment="Top"
+                Width="131"
+                FontSize="20"
+                BorderBrush="#FF727070"
+                Background="White"
+                Click="LogInButton_Click"/>
+        </StackPanel>
+        <Button x:Name="ExitButton" Content="Выход" HorizontalAlignment="Left" Margin="144,318,0,0" VerticalAlignment="Top" Width="131" FontSize="20" FontFamily="Consolas" BorderBrush="#FF727070" Background="White" RenderTransformOrigin="0.493,0.554" Click="ExitButton_Click"/>
+        <Button x:Name="OptionsButton" Content="Настройки" HorizontalAlignment="Left" Margin="10,0,0,7" VerticalAlignment="Bottom" Width="131" FontSize="20" FontFamily="Consolas" BorderBrush="#FF727070" Background="White" RenderTransformOrigin="0.493,0.554" Click="OptionsButton_Click"/>
+        <Button x:Name="minimazeButton" 
+            Style="{StaticResource minimazeButton}"
+            Content="-" 
+            HorizontalAlignment="Left" 
+            Margin="232,0,0,0" 
+            VerticalAlignment="Top" 
+            Foreground="Snow"
+            Width="25" Height="25" Click="minimazeButton_Click"/>
+        <Button x:Name="CloseButton"
+            Style="{StaticResource closeButton}"
+            Content="X" 
+            HorizontalAlignment="Left" 
+            Margin="257,0,0,0" 
+            VerticalAlignment="Top" 
+            Foreground="Snow"
+            Width="25" Height="25" Click="CloseButton_Click"/>
+
+    </Grid>
+</Window>
